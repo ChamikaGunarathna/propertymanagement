@@ -51,21 +51,21 @@ public class PropertyController {
         return responseEntity;
     }
 
-    @PatchMapping("/properties/update-owner_name/{id}")
+    /*@PatchMapping("/properties/update-owner_name/{id}")
     public ResponseEntity updatePropertyOwnerName(@RequestBody PropertyDTO propertyDTO,@PathVariable Long id){
         propertyDTO = propertyService.updatePropertyOwnerName(propertyDTO,id);
 
         ResponseEntity<PropertyDTO> responseEntity = new ResponseEntity<>(propertyDTO, HttpStatus.OK);
         return responseEntity;
-    }
+    }*/
 
-    @PatchMapping("/properties/update-owner_email/{id}")
+    /*@PatchMapping("/properties/update-owner_email/{id}")
     public ResponseEntity updatePropertyOwnerEmail(@RequestBody PropertyDTO propertyDTO,@PathVariable Long id){
         propertyDTO = propertyService.updatePropertyOwnerEmail(propertyDTO,id);
 
         ResponseEntity<PropertyDTO> responseEntity = new ResponseEntity<>(propertyDTO, HttpStatus.OK);
         return responseEntity;
-    }
+    }*/
 
     @PatchMapping("/properties/update-address/{id}")
     public ResponseEntity updatePropertyAddress(@RequestBody PropertyDTO propertyDTO,@PathVariable Long id){
