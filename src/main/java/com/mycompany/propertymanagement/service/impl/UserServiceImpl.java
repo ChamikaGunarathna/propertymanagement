@@ -25,6 +25,16 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public UserDTO register(UserDTO userDTO) {
+        Optional<UserEntity> OptUE = userRepository.findByOwnerEmail(userDTO.getOwnerEmail());
+        if(OptUE.isPresent()){
+            List<ErrorModel> errorModelList = new ArrayList<>();
+            ErrorModel error = new ErrorModel();
+            error.setCode("Registration Failed");
+            error.setErrorMessage("This email is already registered as a user");
+            errorModelList.add(error);
+
+            throw new BusinessException(errorModelList);
+        }
         UserEntity userEntity = userConverter.userDTOToUserEntity(userDTO);
         userEntity = userRepository.save(userEntity);
         userDTO = userConverter.userEntityToUserDTO(userEntity);
