@@ -1,2 +1,5 @@
 http://localhost:8080/swagger-ui/index.html
 http://localhost:8080/v2/api-docs
+https://docs.spring.io/spring-boot/docs/current/reference/html/actuator.html
+https://websparrow.org/spring/failed-to-start-bean-documentationpluginsbootstrapper-nested-exception-is-java-lang-nullpointerexception
+http://localhost:8080/actuator
