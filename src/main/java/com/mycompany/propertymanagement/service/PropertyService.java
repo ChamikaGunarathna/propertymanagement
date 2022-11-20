@@ -13,9 +13,8 @@ public interface PropertyService {
     PropertyDTO updateProperty(PropertyDTO propertyDTO,Long propertyID);
     PropertyDTO updatePropertyDescription(PropertyDTO propertyDTO, Long id);
     PropertyDTO updatePropertyTitle(PropertyDTO propertyDTO, Long id);
-    //PropertyDTO updatePropertyOwnerName( PropertyDTO propertyDTO, Long id);
-    //PropertyDTO updatePropertyOwnerEmail(PropertyDTO propertyDTO, Long id);
     PropertyDTO updatePropertyPrice(PropertyDTO propertyDTO,  Long id);
     PropertyDTO updatePropertyAddress(PropertyDTO propertyDTO, Long id);
     void deleteProperty(Long propertyId);
+    List<PropertyDTO> getAllPropertiesForUser(Long userId);
 }
