@@ -22,4 +22,10 @@ public class UserDTO {
     private String phone;
     @NotNull(message = "Password is mandatory")
     private String password;
+
+    private String houseNo;
+    private String street;
+    private String city;
+    private String postalCode;
+    private String country;
 }
